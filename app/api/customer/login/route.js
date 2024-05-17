@@ -30,14 +30,11 @@ export async function PUT(request) {
 
 export async function GET(request) {
   try {
-    if (!request.body ) {
-      throw new Error('Username not provided in the request body');
-    }
     const {username} = await request.json();
-    console.log(username);
     const balance = await repo.getBalance(username);
     return NextResponse.json({balance}, { status: 200 });
   } catch (error) {
     console.log(error);
+    return NextResponse.json( { status: 500 })
   }
 }

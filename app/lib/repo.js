@@ -106,12 +106,10 @@ export async function updateCustomer(username, customer) {
   }
 }
 
-
-
 export async function getBalance(username) {
   try {
     const customer = await getCustomer(username);
-    return parseFloat(customer.money_balance);
+    return await customer.money_balance;
   } catch (error) {
     console.log(error);
   }
