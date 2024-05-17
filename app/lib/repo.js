@@ -85,16 +85,14 @@ export async function getCustomerLogin(username, password) {
 }
 
 
-export async function addCustomer(user) {
-  try {
-    const users = await fs.readJSON(usersFile);
-    const newUser = { ...user, id: nanoid() };
-    users.push(newUser);
-    await fs.writeJSON(usersFile, users);
-    return newUser;
-  } catch (error) {
-    console.log(error);
-  }
+export async function addCustomer(customer) {
+ 
+		try {
+			return prisma.customer.create({ data: customer })
+		} catch (error) {
+			return { error: error.message }
+		}
+	
 }
 
 export async function updateCustomer(username, customer) {
@@ -108,13 +106,12 @@ export async function updateCustomer(username, customer) {
   }
 }
 
-// a function to update the users balance after a succssful purchase and validate if the user have enough balance to make the purchase
 
 
-export async function getBalance() {
+export async function getBalance(username) {
   try {
-    const users = await fs.readJSON(usersFile);
-    return users[0];
+    const customer = await getCustomer(username);
+    return parseFloat(customer.money_balance);
   } catch (error) {
     console.log(error);
   }
@@ -201,9 +198,6 @@ export async function update_seller(id, user) {
   }
 }
 
-
-
-// a function to get the sell history of a specific seller
 export async function getSellHistory(id) {
   try {
     const users = await fs.readJSON(usersFile);
