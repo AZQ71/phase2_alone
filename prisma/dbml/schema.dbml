@@ -1,0 +1,52 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Seller {
+  id Int [pk, increment]
+  company_name String [not null]
+  username String [unique, not null]
+  password String [not null]
+  bank_account String [unique, not null]
+  sellHistory Item [not null]
+  money_balance Decimal [not null]
+}
+
+Table Customer {
+  id Int [pk, increment]
+  name String [not null]
+  surname String [not null]
+  country String [not null]
+  username String [unique, not null]
+  password String [not null]
+  money_balance Decimal [not null]
+  purchaseHistory Purchase [not null]
+}
+
+Table Item {
+  id Int [pk, increment]
+  name String [not null]
+  category String [not null]
+  price Decimal [not null]
+  description String [not null]
+  owner_username String [not null]
+  quantity Int [not null]
+  url String [not null]
+  Seller Seller [not null]
+  sellerId Int [not null]
+}
+
+Table Purchase {
+  purchaseNo Int [pk, increment]
+  itemId Int [not null]
+  country String [not null]
+  quantity Int [not null]
+  date DateTime [not null]
+  amount Decimal [not null]
+  Customer Customer [not null]
+  customerId Int [not null]
+}
+
+Ref: Item.sellerId > Seller.id [delete: Cascade]
+
+Ref: Purchase.customerId > Customer.id [delete: Cascade]

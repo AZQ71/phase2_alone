@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="CodeHim" />
+    <title>E-Commerce 2024</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./media/icons/shopping-online.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,600,400italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css"
+    />
+    <link rel="stylesheet" href="mainStyle.css" />
+  </head>
+  <body>
+    <header class="intro"></header>
+
+    <main>
+      <div class="wrapper">
+        <header class="site-header">
+          <div class="inner-wrap">
+            <h1>E-Commerce 2024.</h1>
+            <ul class="list-inline">
+              <li>
+                <a href="#" class="search" id="searchButton"
+                  ><i class="fa fa-search"></i
+                ></a>
+              </li>
+              <li>
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Search for an item"
+                />
+              </li>
+              <li><a href="./login.html" class="account">Login</a></li>
+              <li>
+                <a href="addproduct.html" id="sell-item">
+                  Sell item
+                  <img src="./media/icons/upload.svg" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <div class="site-toolbar">
+          <div class="inner-wrap clearfix">
+            <div class="notifications animated">
+              <span>Welcome!</span> Login to purchase
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-grid">
+          <div class="inner-wrap">
+            <div class="filter-cell">
+              <select class="form-control">
+                <option value="*">Category</option>
+                <option value="electronics">Electronics</option>
+                <option value="sports">Sports</option>
+                <option value="fashion">Fashion</option>
+                <option value="home">Home & Kitchen</option>
+              </select>
+            </div>
+            <div class="filter-cell">
+              <select class="form-control">
+                <option value="*">Product Type</option>
+                <option value="square">Square</option>
+                <option value="circular">Circular</option>
+              </select>
+            </div>
+            <div class="filter-cell">
+              <select class="form-control" disabled="true">
+                <option>Price</option>
+              </select>
+            </div>
+            <div class="filter-cell">
+              <select class="form-control" disabled="true">
+                <option>Brand</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="inner-wrap content-wrap">
+          <div class="product-grid"></div>
+        </div>
+
+        <div class="sticky"></div>
+      </div>
+
+      <div class="cart">
+        <div class="inner-wrap">
+          <h2>Your Cart</h2>
+
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th class="product-remove">Remove Items</th>
+                <th class="product-name">Product</th>
+                <th class="product-price">Price</th>
+                <th class="product-quantity">Quantity</th>
+                <th class="product-line-total">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="product-camera">
+                <td>
+                  <button
+                    type="button"
+                    class="product-remove"
+                    data-id="product-camera"
+                  >
+                    <i class="fa fa-times"></i>
+                  </button>
+                </td>
+                <td>Camera</td>
+                <td class="product-price" data-price="3.99">3.99</td>
+                <td class="product-quantity">
+                  <input
+                    type="number"
+                    pattern="\d*"
+                    step="1"
+                    min="1"
+                    max="5"
+                    value="1"
+                    data-id="product-camera"
+                  />
+                  <button class="plus js-number-control">
+                    <i class="fa fa-plus-square"></i>
+                  </button>
+                  <button class="minus js-number-control">
+                    <i class="fa fa-minus-square"></i>
+                  </button>
+                </td>
+                <td
+                  class="product-line-total"
+                  id="product-camera-total"
+                  data-line-total="3.99"
+                >
+                  3.99
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <ul>
+          <li>
+            <a href="https://example.com" class="social-link">
+              <img src="media/icons/brand-x.svg" alt="X icon" />
+              <span>X</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com" class="social-link">
+              <img src="media/icons/brand-linkedin.svg" alt="linkedin icon" />
+              <span>Linkedin</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com" class="social-link">
+              <img src="media/icons/brand-facebook.svg" alt="facebook icon" />
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com" class="social-link">
+              <img src="media/icons/brand-instagram.svg" alt="instagram icon" />
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com" class="social-link">
+              <img src="media/icons/brand-reddit.svg" alt="reddit icon" />
+              <span>Reddit</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com" class="social-link">
+              <img src="media/icons/brand-discord.svg" alt="discord icon" />
+              <span>Discord</span>
+            </a>
+          </li>
+        </ul>
+        <div class="footer-p">
+          <p>
+            Elevate your shopping experience with our extensive range of
+            products and dedicated support services. From finding the perfect
+            item to navigating through your purchase journey, we're committed to
+            empowering you at every turn. Let's make your shopping adventure a
+            memorable success story together!
+          </p>
+          <p>
+            Embark on your shopping journey. Success awaits those who fearlessly
+            pursue their perfect finds.
+          </p>
+          <p class="copy">Copyright &copy; 2021-2024 Shopping., Inc.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.0.0/isotope.pkgd.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

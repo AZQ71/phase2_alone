@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="CodeHim" />
+    <title>E-Commerce 2024</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./media/icons/shopping-online.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,600,400italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css"
+    />
+    <link rel="stylesheet" href="mainStyle.css" />
+    <link rel="stylesheet" href="formStyle.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <header class="site-header">
+          <div class="inner-wrap">
+            <h1>E-Commerce 2024</h1>
+            <ul class="list-inline">
+              <li>
+                <a href="#" class="search" id="searchButton"
+                  ><i class="fa fa-search"></i
+                ></a>
+              </li>
+              <li>
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Search for an item"
+                />
+              </li>
+              <li><a href="./login.html" class="account">Logout</a></li>
+              <li>
+                <a href="addproduct.html" id="sell-item" class="sell-item"
+                  >Sell item <img src="./media/icons/upload.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <div class="site-toolbar">
+          <div class="inner-wrap clearfix">
+            <div class="notifications animated">
+              <span>Sell your product!</span>
+            </div>
+          </div>
+        </div>
+        <div class="inner-wrap content-wrap">
+          <h1>Please provide details about your product</h1>
+          <div class="forms">
+            <fieldset>
+              <legend>Product Details</legend>
+              <form action="" id="addProductForm">
+                <div class="form-group">
+                  <label for="productName">Product name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="productName"
+                    placeholder="Enter product name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="productCategory">Product category:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="productCategory"
+                    placeholder="Enter product category"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="productPrice">Product price ($):</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="productPrice"
+                    placeholder="Enter product price"
+                    min="0"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="productDescription">Product description:</label>
+                  <textarea
+                    class="form-control"
+                    id="productDescription"
+                    rows="3"
+                    placeholder="Describe your product"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="productQuantity">Quantity:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="productQuantity"
+                    placeholder="Enter quantity"
+                    min="1"
+                    value="1"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Upload</button>
+              </form>
+            </fieldset>
+            <div
+              id="purchaseMessage"
+              class="message"
+              style="display: none"
+            ></div>
+          </div>
+        </div>
+        <div class="sticky"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content"></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.0.0/isotope.pkgd.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

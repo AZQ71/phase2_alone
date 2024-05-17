@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "type": "customer",
+    "name": "Alice",
+    "surname": "Smith",
+    "shipping_address": "456 Elm St, Town, Country",
+    "username": "customer1",
+    "password": "password1",
+    "money_balance": 500.01,
+    "purchaseHistory": []
+  },
+  {
+    "id": 2,
+    "type": "customer",
+    "name": "Alice",
+    "surname": "Smith",
+    "shipping_address": "998 BLACKHOOD St, DownTown, Country",
+    "username": "customer2",
+    "password": "password2",
+    "money_balance": 1500,
+    "purchaseHistory": []
+  },
+  {
+    "id": 3,
+    "type": "customer",
+    "name": "Emma",
+    "surname": "Johnson",
+    "shipping_address": "789 Oak St, Village, Country",
+    "username": "customer3",
+    "password": "password3",
+    "money_balance": 2000,
+    "purchaseHistory": []
+  },
+  {
+    "id": 4,
+    "type": "customer",
+    "name": "Michael",
+    "surname": "Brown",
+    "shipping_address": "101 Pine St, Suburb, Country",
+    "username": "customer4",
+    "password": "password4",
+    "money_balance": 3935.2200000000007,
+    "purchaseHistory": [7, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 7, 7, 7, 7]
+  },
+  {
+    "id": 5,
+    "type": "seller",
+    "company_name": "ABC Electronics",
+    "username": "seller1",
+    "password": "password1",
+    "bank_account": "1234567890123456",
+    "purchaseHistory": [],
+    "sellHistory": [{ "item_id": 1, "username": "customer4" }],
+    "money_balance": 500.01
+  },
+  {
+    "id": 6,
+    "type": "seller",
+    "company_name": "XYZ Gadgets",
+    "username": "seller2",
+    "password": "password2",
+    "bank_account": "9876543210987654",
+    "purchaseHistory": [],
+    "sellHistory": [],
+    "money_balance": 500.01
+  },
+  {
+    "id": 7,
+    "type": "seller",
+    "company_name": "PQR Tech",
+    "username": "seller3",
+    "password": "password3",
+    "bank_account": "1357924680135792",
+    "purchaseHistory": [],
+    "sellHistory": [
+      { "item_id": 2, "username": "customer4" },
+      { "item_id": 2, "username": "customer4" },
+      { "item_id": 2, "username": "customer4" },
+      { "item_id": 2, "username": "customer4" },
+      { "item_id": 2, "username": "customer4" },
+      { "item_id": 2, "username": "customer4" },
+      { "item_id": 2, "username": "customer4" },
+      { "item_id": 2, "username": "customer4" },
+      { "item_id": 2, "username": "customer4" },
+      { "item_id": 2, "username": "customer4" },
+      { "item_id": 2, "username": "customer4" },
+      { "item_id": 2, "username": "customer4" }
+    ],
+    "money_balance": 2899.9700000000003
+  },
+  {
+    "id": 8,
+    "type": "seller",
+    "company_name": "MNO Supplies",
+    "username": "seller4",
+    "password": "password4",
+    "bank_account": "2468013579246801",
+    "purchaseHistory": [],
+    "sellHistory": [
+      { "item_id": 7, "username": "customer4" },
+      { "item_id": 7, "username": "customer4" },
+      { "item_id": 7, "username": "customer4" },
+      { "item_id": 7, "username": "customer4" },
+      { "item_id": 7, "username": "customer4" }
+    ],
+    "money_balance": 859.8900000000001
+  },
+  {
+    "id": 9,
+    "type": "admin",
+    "username": "admin1",
+    "password": "admin",
+    "purchaseHistory": []
+  },
+  {
+    "id": 10,
+    "type": "admin",
+    "username": "admin2",
+    "password": "admin",
+    "purchaseHistory": []
+  },
+  {
+    "id": 11,
+    "type": "admin",
+    "username": "admin3",
+    "password": "admin",
+    "purchaseHistory": []
+  },
+  {
+    "id": 12,
+    "type": "admin",
+    "username": "admin4",
+    "password": "admin",
+    "purchaseHistory": []
+  }
+]

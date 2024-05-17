@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="CodeHim" />
+    <title>E-Commerce 2024</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./media/icons/shopping-online.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,600,400italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css"
+    />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./mainStyle.css" />
+  </head>
+  <body>
+    <header class="intro"></header>
+
+    <main>
+      <div class="wrapper">
+        <header class="site-header">
+          <div class="inner-wrap">
+            <h1>E-Commerce 2024.</h1>
+            <ul class="list-inline">
+              <li>
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Search items..."
+                />
+              </li>
+              <li>
+                <a href="#" class="search"
+                  ><i class="fa fa-search" onclick="searchItems()"></i
+                ></a>
+              </li>
+              <li><a href="index.html" class="account">Logout</a></li>
+            </ul>
+          </div>
+        </header>
+
+        <div class="site-toolbar">
+          <div class="inner-wrap clearfix">
+            <div class="notifications animated"><span>Purchase Info</span></div>
+          </div>
+        </div>
+
+        <div class="inner-wrap content-wrap">
+          <div class="forms">
+            <fieldset>
+              <legend>Product Details</legend>
+              <form action="">
+                <div>
+                  <p>Product name: <span id="productName"></span></p>
+                  <!-- <p>Product quantity: <span id="productQuantity"></span></p> -->
+                  <p>Product price: <span id="productPrice"></span></p>
+                  <p>Product category: <span id="productCategory"></span></p>
+                  <p>
+                    Product description: <span id="productDescription"></span>
+                  </p>
+                </div>
+              </form>
+            </fieldset>
+            <fieldset>
+              <legend>Shipping Address</legend>
+              <form id="purchase-details-form">
+                <label for="quantity">Quantity:</label>
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  min="1"
+                  required
+                />
+                <br />
+                <label for="address">Shipping Address:</label>
+                <input type="text" id="address" name="address" required />
+                <button type="submit" id="confirm-purchase">
+                  Confirm Purchase
+                </button>
+              </form>
+            </fieldset>
+            <p id="totalPrice"></p>
+
+            <div
+              id="purchaseMessage"
+              class="message"
+              style="display: none"
+            ></div>
+          </div>
+        </div>
+
+        <div class="sticky"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <ul>
+          <li>
+            <a href="https://example.com" class="social-link">
+              <img src="media/icons/brand-x.svg" alt="X icon" />
+              <span>X</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com" class="social-link">
+              <img src="media/icons/brand-linkedin.svg" alt="linkedin icon" />
+              <span>Linkedin</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com" class="social-link">
+              <img src="media/icons/brand-facebook.svg" alt="facebook icon" />
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com" class="social-link">
+              <img src="media/icons/brand-instagram.svg" alt="instagram icon" />
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com" class="social-link">
+              <img src="media/icons/brand-reddit.svg" alt="reddit icon" />
+              <span>Reddit</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com" class="social-link">
+              <img src="media/icons/brand-discord.svg" alt="discord icon" />
+              <span>Discord</span>
+            </a>
+          </li>
+        </ul>
+        <div class="footer-p">
+          <p>
+            Elevate your shopping experience with our extensive range of
+            products and dedicated support services. From finding the perfect
+            item to navigating through your purchase journey, we're committed to
+            empowering you at every turn. Let's make your shopping adventure a
+            memorable success story together!
+          </p>
+          <p>
+            Embark on your shopping journey. Success awaits those who fearlessly
+            pursue their perfect finds.
+          </p>
+          <p class="copy">Copyright &copy; 2021-2024 Shopping., Inc.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.0.0/isotope.pkgd.min.js"></script>
+    <script src="./purchase.js"></script>
+  </body>
+</html>

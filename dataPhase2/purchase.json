@@ -1,0 +1,49 @@
+[
+    {
+        "purchaseNo" :1,   
+        "itemId":1,        
+        "country": "Qatar",
+        "quantity":1,  
+        "date":"2023-02-20T00:00:00.000Z",     
+        "amount": 200,
+        "customerId":1
+
+    },
+    {
+        "purchaseNo" :2,   
+        "itemId":5,        
+        "country": "Oman",
+        "quantity":3,  
+        "date":"2021-02-20T00:00:00.000Z",     
+        "amount": 100,
+        "customerId":2
+    },
+    { 
+        "purchaseNo" :3,   
+        "itemId":7,        
+        "country": "Sudan",
+        "quantity":2,  
+        "date":"2022-02-20T00:00:00.000Z",     
+        "amount": 300,
+        "customerId":3
+    },
+    {   
+        "purchaseNo" :4,   
+        "itemId":3,        
+        "country": "Cuba",
+        "quantity":2,  
+        "date":"2020-02-20T00:00:00.000Z",     
+        "amount": 400,
+        "customerId":4
+    },
+    {   
+        "purchaseNo" :5,   
+        "itemId":7,        
+        "country": "Sudan",
+        "quantity":2,  
+        "date":"2021-02-20T00:00:00.000Z",     
+        "amount": 600,
+        "customerId":4
+
+    }
+]

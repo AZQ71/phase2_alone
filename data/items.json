@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "name": "Laptop",
+    "category": "Electronics",
+    "price": 999.99,
+    "description": "A high-performance laptop with the latest specifications.",
+    "owner_username": "seller1",
+    "quantity": 10,
+    "url": "https://i.imgur.com/1o3KcN6.png"
+  },
+  {
+    "id": "2",
+    "name": "Smartphone",
+    "category": "Electronics",
+    "price": 599.99,
+    "description": "A powerful smartphone with a large display and advanced features.",
+    "owner_username": "seller3",
+    "quantity": 6,
+    "url": "https://cdnprod.mafretailproxy.com/sys-master-root/hae/hf9/50635113201694/480Wx480H_991972_main.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Headphones",
+    "category": "Electronics",
+    "price": 99.99,
+    "description": "Wireless headphones with noise-canceling technology for immersive audio experience.",
+    "owner_username": "seller3",
+    "quantity": 10,
+    "url": "https://sony.scene7.com/is/image/sonyglobalsolutions/360-RA-category-icon-20221202?$S7Product$&fmt=png-alpha"
+  },
+  {
+    "id": 4,
+    "name": "Running Shoes",
+    "category": "Sports",
+    "price": 79.99,
+    "description": "High-quality running shoes designed for comfort and performance.",
+    "owner_username": "seller1",
+    "quantity": 10,
+    "url": "https://cdn.thewirecutter.com/wp-content/media/2023/09/running-shoes-2048px-5946.jpg?auto=webp&quality=75&width=1024"
+  },
+  {
+    "name": "Backpack",
+    "category": "Fashion",
+    "price": 29,
+    "description": "Stylish backpack with multiple compartments for everyday use.",
+    "id": "5",
+    "owner_username": "seller4",
+    "quantity": 10,
+    "url": "https://cdn.thewirecutter.com/wp-content/media/2022/09/backpacks-2048px-9904.jpg?auto=webp&quality=75&width=1024"
+  },
+  {
+    "id": 6,
+    "name": "Coffee Maker",
+    "category": "Home & Kitchen",
+    "price": 129.99,
+    "description": "Automatic coffee maker with programmable settings for brewing your favorite coffee.",
+    "owner_username": "seller4",
+    "quantity": 10,
+    "url": "https://m.media-amazon.com/images/I/71LB1AbsorL.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Sunglasses",
+    "category": "Fashion",
+    "price": 29.99,
+    "description": "Trendy sunglasses with UV protection for outdoor activities.",
+    "owner_username": "seller4",
+    "quantity": 5,
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT79778slBCPbp2dm5YDKNiYbSo1wLN9UtSLBUFxl3WLg&s"
+  },
+  {
+    "id": 8,
+    "name": "Fitness Tracker",
+    "category": "Sports",
+    "price": 49.99,
+    "description": "Track your daily activity, heart rate, and sleep with this fitness tracker.",
+    "owner_username": "seller1",
+    "quantity": 10,
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJNSQLJLiwupcgg3J9AbCcZRpQAWIn5B4LOpPrX4ExBw&s"
+  },
+  {
+    "id": 9,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 79.99,
+    "description": "Portable Bluetooth speaker with high-quality sound and long battery life.",
+    "owner_username": "seller2",
+    "quantity": 10,
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6nAwQ-Omp-MTl9tO2SzFmUJ70Hep8NgkwaC4Pi8p5sQ&s"
+  },
+  {
+    "id": 10,
+    "name": "Watch",
+    "category": "Fashion",
+    "price": 149.99,
+    "description": "Classic wristwatch with a stainless steel strap and water-resistant design.",
+    "quantity": 10,
+    "owner_username": "seller2",
+    "url": "https://static.alaneesqatar.qa/2022/09/APPLE-WATCH-SERIES-8-MNP13-GPS-45MM-1.png?tr=w-395,q-80  "
+  }
+]

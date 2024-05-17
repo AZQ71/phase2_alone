@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+model Seller {
+  id            Int     @id @default(autoincrement())
+  company_name  String
+  username      String  @unique
+  password      String
+  bank_account  String  @unique
+  sellHistory   Item[]
+  money_balance Decimal
+}
+
+model Customer {
+  id              Int        @id @default(autoincrement())
+  name            String
+  surname         String
+  country         String
+  username        String     @unique
+  password        String
+  money_balance   Decimal
+  purchaseHistory Purchase[]
+}
+
+model Item {
+  id             Int     @id @default(autoincrement())
+  name           String
+  category       String
+  price          Decimal
+  description    String
+  owner_username String
+  quantity       Int
+  url            String
+
+  Seller   Seller @relation(fields: [sellerId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  sellerId Int
+}
+
+model Purchase {
+  purchaseNo Int      @id @default(autoincrement())
+  itemId     Int
+  country    String
+  quantity   Int
+  date       DateTime
+  amount     Decimal
+
+  Customer   Customer @relation(fields: [customerId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  customerId Int
+}

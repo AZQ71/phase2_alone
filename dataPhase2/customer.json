@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "Alice",
+      "surname": "Smith",
+      "country":"Oman",
+      "username": "customer1",
+      "password": "password1",
+      "money_balance": 500.01,
+      "purchaseHistory": {
+        "create": [] 
+      }
+    },
+    {
+      "id": 2,
+      "name": "Alice",
+      "surname": "Smith",
+      "country":"Qatar",
+      "username": "customer2",
+      "password": "password2",
+      "money_balance": 1500,
+      "purchaseHistory": {
+        "create": []
+      }
+    },
+    {
+      "id": 3,
+      "name": "Emma",
+      "surname": "Johnson",
+      "country":"Sudan",
+      "username": "customer3",
+      "password": "password3",
+      "money_balance": 2000,
+      "purchaseHistory": {
+        "create": [] 
+      }
+    },
+    {
+      "id": 4,
+      "name": "Michael",
+      "surname": "Brown",
+      "country":"Cuba",
+      "username": "customer4",
+      "password": "password4",
+      "money_balance": 3935.2200000000007,
+      "purchaseHistory": {
+        "create": [] 
+      }
+    }
+  ]
+  
