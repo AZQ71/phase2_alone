@@ -109,32 +109,26 @@ export async function updateCustomer(username, customer) {
 export async function getBalance(username) {
   try {
     const customer = await getCustomer(username);
-    return await customer.money_balance;
+    return customer.money_balance;
   } catch (error) {
     console.log(error);
   }
 }
 
 export async function updateBalance(username, amount) {
-  try {
-    const users = await fs.readJSON(usersFile);
-    const user = users.find((user) => user.username == username);
-    if (!user) {
-      return { error: "User not found" };
+  try{
+    return prisma.customer.update({
+      where: { username: username},
+      data: {money_balance: amount}
     }
-    if (user.money_balance < amount) {
-      return { error: "Insufficient balance" };
-    }
-    user.money_balance -= amount;
-    await fs.writeJSON(usersFile, users);
-    return user;
-  } catch (error) {
-    console.log(error);
+  )
   }
+  catch(error){
+    return { error: error.message }
+  }
+  
 }
 
-
-// a function to get the purchase history of a specific user
 export async function getPurchaseHistory(id) {
   try {
     const users = await fs.readJSON(usersFile);
@@ -148,51 +142,50 @@ export async function getPurchaseHistory(id) {
   }
 }
 
+
+//Seller part.
 export async function getSellers() {
   try {
-    return prisma.customer.findMany()
+    return prisma.seller.findMany()
   } catch (error) {
     return { error: error.message }
   }
 }
 
-export async function getSeller(custId) {
+export async function getSeller(username) {
   try {
-    return prisma.customer.findUnique({ where: { id: custId } })
+    return prisma.seller.findUnique({ where: { username: username } })
   } catch (error) {
     return { error: error.message }
   }
 }
 
-
-
-export async function add_seller(user) {
+export async function getSellerLogin(username, password) {
   try {
-    const users = await fs.readJSON(usersFile);
-    const newUser = { ...user, id: nanoid() };
-    users.push(newUser);
-    await fs.writeJSON(usersFile, users);
-    return newUser;
+    return prisma.seller.findFirst({ where: {
+      AND: [ {username},{password}] }})
   } catch (error) {
-    console.log(error);
+    return { error: error.message }
+  }}
+
+
+export async function addSeller(seller) {
+ 
+  try {
+    return prisma.seller.create({ data: seller })
+  } catch (error) {
+    return { error: error.message }
   }
 }
 
-export async function update_seller(id, user) {
+export async function updateSeller(username, seller) {
   try {
-    const users = await fs.readJSON(usersFile);
-    const index = users.findIndex((user) => user.username == id);
-    // console.log(index);
-    if (index == -1) {
-      return null;
-    }
-    // console.log(index);
-    user.username = id;
-    users[index] = user;
-    await fs.writeJSON(usersFile, users);
-    return user;
+    return prisma.seller.update({
+      where: { username: username },
+      data: seller
+    })
   } catch (error) {
-    console.log(error);
+    return { error: error.message }
   }
 }
 

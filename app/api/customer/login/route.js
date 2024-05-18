@@ -28,13 +28,4 @@ export async function PUT(request) {
   }
 }
 
-export async function GET(request) {
-  try {
-    const {username} = await request.json();
-    const balance = await repo.getBalance(username);
-    return NextResponse.json({balance}, { status: 200 });
-  } catch (error) {
-    console.log(error);
-    return NextResponse.json( { status: 500 })
-  }
-}
+
