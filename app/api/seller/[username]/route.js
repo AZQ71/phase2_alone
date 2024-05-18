@@ -11,6 +11,17 @@ export async function GET(request, { params }) {
   }
 }
 
+export async function POST(request, { params }) {
+  try {
+    const { username } = params;
+    const Sell_History = await repo.getSellHistory(username);
+    return NextResponse.json({ Sell_History }, { status: 200 });
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export async function PUT(request, { params }) {
   try {
     const { username } = params;

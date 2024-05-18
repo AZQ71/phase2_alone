@@ -11,6 +11,17 @@ export async function GET(request, { params }) {
   }
 }
 
+export async function POST(request, { params }) {
+  try {
+    const { username } = params;
+    const balance = await repo.getBalance(username);
+    return NextResponse.json({ customer_Balance : balance }, { status: 200 });
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export async function PUT(request, { params }) {
   try {
     const { username } = params;

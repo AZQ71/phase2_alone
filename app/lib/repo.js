@@ -131,14 +131,12 @@ export async function updateBalance(username, amount) {
 
 export async function getPurchaseHistory(id) {
   try {
-    const users = await fs.readJSON(usersFile);
-    const user = users.find((user) => user.id == id);
-    if (!user) {
-      return { error: "User not found" };
-    }
-    return user.purchase_history;
+    return prisma.customer.findUnique({
+      where: { id: id },
+      select: { purchaseHistory: true }
+    })
   } catch (error) {
-    console.log(error);
+    return { error: error.message }
   }
 }
 
@@ -189,31 +187,14 @@ export async function updateSeller(username, seller) {
   }
 }
 
-export async function getSellHistory(id) {
+export async function getSellHistory(username) {
   try {
-    const users = await fs.readJSON(usersFile);
-    const user = users.find((user) => user.id == id);
-    if (!user) {
-      return { error: "User not found" };
-    }
-    return user.sellHistory;
+    return prisma.seller.findUnique({
+      where: { username: username },
+      select: { sellHistory: true }
+    })
   } catch (error) {
-    console.log(error);
+    return { error: error.message }
   }
 }
 
-// a function to update the sellHistory array in the users.json file after a successful sale
-export async function updateSellHistory(id, item) {
-  try {
-    const users = await fs.readJSON(usersFile);
-    const user = users.find((user) => user.id == id);
-    if (!user) {
-      return { error: "User not found" };
-    }
-    user.sellHistory.push(item);
-    await fs.writeJSON(usersFile, users);
-    return user;
-  } catch (error) {
-    console.log(error);
-  }
-}
