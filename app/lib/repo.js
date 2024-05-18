@@ -198,3 +198,7 @@ export async function getSellHistory(username) {
   }
 }
 
+// Statisctics queries
+
+
+
