@@ -35,24 +35,3 @@ export async function DELETE(request, { params }) {
   }
 }
 
-// // Route to get items currently being sold by a seller
-// export async function GET(request, { params }) {
-//   try {
-//     const { id } = params;
-//     const items = await repo.getSellerItems(id);
-//     return NextResponse.json({ items });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-// Route to get items that have been sold by a seller
-// export async function GET(request, { params }) {
-//   try {
-//     const { id } = params;
-//     const items = await repo.getSoldItems(id);
-//     return NextResponse.json({ items });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
