@@ -200,5 +200,62 @@ export async function getSellHistory(username) {
 
 // Statisctics queries
 
+// The total amount of purchases (for all buyers) per product and per year:
+
+export async function getTotalPurchasesPerProductPerYear(){
+
+  try{
+const totalPurchasesPerProductPerYear = await prisma.purchase.groupBy({
+  
+  by: ['itemId', 'date'],
+  _sum: {
+    amount: true
+  },
+  _count: {
+    itemId: true
+  },
+  orderBy: {
+    _sum: {
+      amount: 'desc'
+    }
+  }
+})
+return totalPurchasesPerProductPerYear 
+
+}
+catch(error){
+
+return error.message
+
+}
+}
+
+
+// The number of buyers per location (e.g. city, country):
+
+export async function getBuyersPerLocation(){
+
+  try{
+const buyersPerLocation = await prisma.customer.groupBy({
+  
+  by: ['country'],
+  _count: {
+    id: true
+  }
+})
+return buyersPerLocation 
+
+}
+catch(error){
+
+return error.message
+
+}
+}
+
+// The most 3 products bought over the last 6 months,
+
+// The product types never purchased
+
 
 

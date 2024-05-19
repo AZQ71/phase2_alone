@@ -1,0 +1,68 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table td {
+    border: 1px solid #ddd;
+    padding: 3rem;
+  }
+  
+  .table td:hover {
+    transition: 0.5s;
+    background-color: #f2f2f2;
+    color: black;
+  }
+  
+  .link {
+    color: #0070f3;
+    text-decoration: none;
+    font-size: 1.5rem;
+    
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .tableContainer {
+    margin-top: 20px; /* Adjust spacing as needed */
+  }
+
+  .title{
+    font-size: 5rem;
+  }
+  
+
+.statContainer {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.statTitle {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+
+.statContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.statContent p {
+    margin: 0;
+    font-size: 16px;
+}
