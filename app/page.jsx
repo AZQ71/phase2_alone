@@ -13,9 +13,9 @@ export default function Home() {
               <td><Link href="/stat1" className={styles.link}>Stat 1: Total amount of purchases per product and per year</Link></td>
               <td><Link href="/stat2" className={styles.link}>Stat 2: Buyers Per Location</Link></td>
               <td><Link href="/stat3" className={styles.link}>Stat 3: Most Bought Products Last 6 Months</Link></td>
-              <td><Link href="/stat4" className={styles.link}>Stat 4:</Link></td>
-              <td><Link href="/stat5" className={styles.link}>Stat 5</Link></td>
-              <td><Link href="/stat6" className={styles.link}>Stat 6</Link></td>
+              <td><Link href="/stat4" className={styles.link}>Stat 4: Never Purchased Types</Link></td>
+              <td><Link href="/stat5" className={styles.link}>Stat 5: Total Revenue By Seller</Link></td>
+              <td><Link href="/stat6" className={styles.link}>Stat 6: Richest 3 Buyers</Link></td>
             </tr>
           </tbody>
         </table>

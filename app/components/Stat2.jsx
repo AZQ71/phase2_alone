@@ -1,4 +1,4 @@
-"use client";
+
 import React from 'react';
 import styles from '@/app/Home.module.css'; // Import CSS module for styling
 

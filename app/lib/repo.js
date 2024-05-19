@@ -346,3 +346,31 @@ return error.message
 
 }
 }
+
+// Get the top 3 buyers by money balance (Richest 3)
+
+
+export async function gettopBuyersByMoneyBalance(){
+
+  try{
+
+const topBuyersByMoneyBalance = await prisma.customer.findMany({
+  select: {
+    username: true,
+    money_balance: true
+  },
+  orderBy: {
+    money_balance: 'desc'
+  },
+  take: 3
+});
+
+    return topBuyersByMoneyBalance;
+    
+}
+catch(error){
+
+return error.message
+
+}
+}

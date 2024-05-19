@@ -5,7 +5,7 @@ import Stat6 from '../components/Stat6';
 // This is a server component
 export default async function Page() {
   // Fetch data from the server-side
-  const data = await repo.getNeverPurchasedTypes();
+  const data = await repo.gettopBuyersByMoneyBalance();
 
   return (
     <>
